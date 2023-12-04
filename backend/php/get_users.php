@@ -1,18 +1,28 @@
 <?php
 include('connection.php');
 
-$query = $mysqli->prepare('select users.id,users.first_name,users.last_name,users.email,user_types.name from users inner join user_types on users.usertype_id = user_types.id');
-$query->execute();
-$array=$query->get_result();
+$response = array(); // Initialize the response array
 
-$response=[];
-while ($users= $array->fetch_assoc()) {
-    $response[]=$users;
+$query = $mysqli->prepare('SELECT users.id, users.first_name, users.last_name, users.email, user_types.name 
+                           FROM users 
+                           INNER JOIN user_types ON users.usertype_id = user_types.id');
+if ($query) {
+    $query->execute();
+    $result = $query->get_result();
+
+    if ($result) {
+        while ($user = $result->fetch_assoc()) {
+            $response[] = $user;
+        }
+        $query->close();
+    } else {
+        $response['status'] = "failed";
+        $response['message'] = "Error fetching results from the database";
+    }
+} else {
+    $response['status'] = "failed";
+    $response['message'] = "Error preparing the SQL statement";
 }
 
 echo json_encode($response);
-
-
-
-
 ?>
