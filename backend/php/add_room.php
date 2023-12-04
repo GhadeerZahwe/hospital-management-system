@@ -3,9 +3,13 @@ include('connection.php');
 
 $response = array(); // Initialize the response array
 
-if (isset($_POST['room_number']) && isset($_POST['is_vip']) &&
-    isset($_POST['number_beds']) && isset($_POST['floor_number']) && isset($_POST['phone_number']) &&
-    isset($_POST['cost_day_usd']) && isset($_POST['department_id'])) {
+if (isset($_POST['room_number']) 
+&& isset($_POST['is_vip']) 
+&& isset($_POST['number_beds']) 
+&& isset($_POST['floor_number']) 
+&& isset($_POST['phone_number']) 
+&& isset($_POST['cost_day_usd']) 
+&& isset($_POST['department_id'])) {
 
         
     $room_number = intval($_POST['room_number']);
