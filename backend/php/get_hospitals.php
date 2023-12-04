@@ -1,18 +1,26 @@
 <?php
 include('connection.php');
 
-$query = $mysqli->prepare('SELECT * FROM hospitals');
-$query->execute();
-$array=$query->get_result();
+$response = array(); // Initialize the response array
 
-$response=[];
-while ($hospitals= $array->fetch_assoc()) {
-    $response[]=$hospitals;
+$query = $mysqli->prepare('SELECT * FROM hospitals');
+if ($query) {
+    $query->execute();
+    $result = $query->get_result();
+
+    if ($result) {
+        while ($hospital = $result->fetch_assoc()) {
+            $response[] = $hospital;
+        }
+        $query->close();
+    } else {
+        $response['status'] = "failed";
+        $response['message'] = "Error fetching results from the database";
+    }
+} else {
+    $response['status'] = "failed";
+    $response['message'] = "Error preparing the SQL statement";
 }
 
 echo json_encode($response);
-
-
-
-
 ?>
