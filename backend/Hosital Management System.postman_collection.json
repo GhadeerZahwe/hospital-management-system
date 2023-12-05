@@ -1,0 +1,1138 @@
+{
+	"info": {
+		"_postman_id": "4c7143b0-fd76-41a6-9340-89d1f6026e88",
+		"name": "Hosital Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20658044"
+	},
+	"item": [
+		{
+			"name": "Rooms",
+			"item": [
+				{
+					"name": "Edit Room",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "room_id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "room_number",
+									"value": "111",
+									"type": "text"
+								},
+								{
+									"key": "is_vip",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "number_beds",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "floor_number",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "03398765",
+									"type": "text"
+								},
+								{
+									"key": "cost_day_usd",
+									"value": "500",
+									"type": "text"
+								},
+								{
+									"key": "department_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/hospital-management-system/backend/php/edit_room.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"hospital-management-system",
+								"backend",
+								"php",
+								"edit_room.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Rooms",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Ali",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Mohamad",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ali@m.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "birth_date",
+									"value": "1997-02-07",
+									"type": "text"
+								},
+								{
+									"key": "user_type",
+									"value": "Patient",
+									"type": "text"
+								},
+								{
+									"key": "user_type_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/hospital-management-system/backend/php/get_rooms.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"hospital-management-system",
+								"backend",
+								"php",
+								"get_rooms.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Room",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "room_id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/hospital-management-system/backend/php/delete_room.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"hospital-management-system",
+								"backend",
+								"php",
+								"delete_room.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Room",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "room_number",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "is_vip",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "number_beds",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "floor_number",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "333",
+									"type": "text"
+								},
+								{
+									"key": "cost_day_usd",
+									"value": "270",
+									"type": "text"
+								},
+								{
+									"key": "department_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/hospital-management-system/backend/php/add_room.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"hospital-management-system",
+								"backend",
+								"php",
+								"add_room.php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hospitals",
+			"item": [
+				{
+					"name": "Get Hospitals",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Ali",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Mohamad",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ali@m.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "birth_date",
+									"value": "1997-02-07",
+									"type": "text"
+								},
+								{
+									"key": "user_type",
+									"value": "Patient",
+									"type": "text"
+								},
+								{
+									"key": "user_type_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/hospital-management-system/backend/php/get_hospitals.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"hospital-management-system",
+								"backend",
+								"php",
+								"get_hospitals.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Hospital",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "hospital_id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Rasoul",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Beirut",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "rasoul.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/hospital-management-system/backend/php/edit_hospital.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"hospital-management-system",
+								"backend",
+								"php",
+								"edit_hospital.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Hospital",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "hospital_id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Rasoul",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Beirut",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "rasoul.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/hospital-management-system/backend/php/add_hospital.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"hospital-management-system",
+								"backend",
+								"php",
+								"add_hospital.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Hospital",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "hospital_id",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/hospital-management-system/backend/php/delete_hospital.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"hospital-management-system",
+								"backend",
+								"php",
+								"delete_hospital.php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Departments",
+			"item": [
+				{
+					"name": "Get Departments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Ali",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Mohamad",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ali@m.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "birth_date",
+									"value": "1997-02-07",
+									"type": "text"
+								},
+								{
+									"key": "user_type",
+									"value": "Patient",
+									"type": "text"
+								},
+								{
+									"key": "user_type_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/hospital-management-system/backend/php/get_departments.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"hospital-management-system",
+								"backend",
+								"php",
+								"get_departments.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Department",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "New",
+									"type": "text"
+								},
+								{
+									"key": "building",
+									"value": "C",
+									"type": "text"
+								},
+								{
+									"key": "floor",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/hospital-management-system/backend/php/add_department.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"hospital-management-system",
+								"backend",
+								"php",
+								"add_department.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Department",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "New",
+									"type": "text"
+								},
+								{
+									"key": "building",
+									"value": "D",
+									"type": "text"
+								},
+								{
+									"key": "floor",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "department_id",
+									"value": "6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/hospital-management-system/backend/php/edit_department.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"hospital-management-system",
+								"backend",
+								"php",
+								"edit_department.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Department",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "hospital_id",
+									"value": "6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/hospital-management-system/backend/php/delete_department.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"hospital-management-system",
+								"backend",
+								"php",
+								"delete_department.php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Ali",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Mohamad",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ali@m.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "birth_date",
+									"value": "1997-02-07",
+									"type": "text"
+								},
+								{
+									"key": "user_type",
+									"value": "Patient",
+									"type": "text"
+								},
+								{
+									"key": "user_type_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/hospital-management-system/backend/php/get_users.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"hospital-management-system",
+								"backend",
+								"php",
+								"get_users.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "Jana",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Zahwe",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jana@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "usertype_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/hospital-management-system/backend/php/edit_user.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"hospital-management-system",
+								"backend",
+								"php",
+								"edit_user.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "8",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/hospital-management-system/backend/php/delete_user.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"hospital-management-system",
+								"backend",
+								"php",
+								"delete_user.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "8",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/hospital-management-system/backend/php/delete_user.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"hospital-management-system",
+								"backend",
+								"php",
+								"delete_user.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign User to Hospital",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "hospital_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/hospital-management-system/backend/php/assign_users.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"hospital-management-system",
+								"backend",
+								"php",
+								"assign_users.php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register (Add User)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Ghadeer",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Zahwe",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ghadeerZa@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "P@ssw0r",
+									"type": "text"
+								},
+								{
+									"key": "birth_date",
+									"value": "1997-02-07",
+									"type": "text"
+								},
+								{
+									"key": "user_type",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "user_type_id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/hospital-management-system/backend/php/registration.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"hospital-management-system",
+								"backend",
+								"php",
+								"registration.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Ali",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Mohamad",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ali@m.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "birth_date",
+									"value": "1997-02-07",
+									"type": "text"
+								},
+								{
+									"key": "user_type",
+									"value": "Patient",
+									"type": "text"
+								},
+								{
+									"key": "user_type_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/hospital-management-system/backend/php/login.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"hospital-management-system",
+								"backend",
+								"php",
+								"login.php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Types",
+			"item": [
+				{
+					"name": "Get User Types",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Ali",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Mohamad",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ali@m.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "birth_date",
+									"value": "1997-02-07",
+									"type": "text"
+								},
+								{
+									"key": "user_type",
+									"value": "Patient",
+									"type": "text"
+								},
+								{
+									"key": "user_type_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/hospital-management-system/backend/php/get_usertypes.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"hospital-management-system",
+								"backend",
+								"php",
+								"get_usertypes.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add User Type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Manager",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/hospital-management-system/backend/php/add_user_type.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"hospital-management-system",
+								"backend",
+								"php",
+								"add_user_type.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit User Type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Managerr",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/hospital-management-system/backend/php/edit_user_type.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"hospital-management-system",
+								"backend",
+								"php",
+								"edit_user_type.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User Type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/hospital-management-system/backend/php/delete_user_type.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"hospital-management-system",
+								"backend",
+								"php",
+								"delete_user_type.php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
